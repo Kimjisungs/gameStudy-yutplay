@@ -1,0 +1,133 @@
+* {
+  text-align: center;
+  box-sizing: border-box;
+}
+input[type="radio"]:disabled,
+input[type="radio"]:disabled + label {
+  background-color: #d8d8d8;
+  cursor: default;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: auto;
+  background-color: gray !important;
+  border: 1px solid gray !important;
+}
+.computer-area .btn-start {
+  color: #666 !important;
+  cursor: default;
+}
+.wrap {
+  min-width: 900px;
+  padding: 60px;
+}
+.content {
+  display: flex;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.play-ground {
+  padding: 0 20px;
+  width: 60%;
+  height: 100%;
+}
+.area {
+  width: 20%;
+  height: 100%;
+  padding-top: 60px;
+}
+.tab {
+  display: flex;
+  justify-content: center;
+}
+.tab li {
+  position: relative;
+  flex-basis: 25%;
+  border: 1px solid #222;
+}
+.tab li label {
+  display: block;
+  padding: 10px 9%;
+  cursor: pointer;
+}
+.tab li input[type="radio"] {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.malpan {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-height: 187px;
+  margin-top: 150px;
+  padding: 10px;
+  border: 1px dashed #888;
+}
+.malpan::after {
+  content: "말판";
+  position: absolute;
+  top: -66px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 25px;
+  font-weight: bold;
+}
+.malpan li {
+  position: relative;
+  float: left;
+  width: 16.6666%;
+  border: 1px solid #999;
+  padding: 5px 0;
+}
+.malpan li span {
+  width: 100%;
+  height: 100%;
+}
+.malpan li span::before,
+.malpan li span::after {
+  opacity: 0.4;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.malpan li.target_1 span::before {
+  left: 0;
+  background-color: orange;
+}
+.malpan li.target_2 span::after {
+  right: 0;
+  background-color: green;
+}
+.malpan li.target_1.target_2 span::before,
+.malpan li.target_1.target_2 span::after {
+  width: 50%;
+}
+.area strong {
+  font-size: 30px;
+}
+.area button {
+  margin-top: 20px;
+  padding: 8px 35px;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 150px;
+  border: 1px solid #222;
+}
