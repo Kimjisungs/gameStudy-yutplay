@@ -37,6 +37,33 @@ $targetBox.innerHTML += `<span style="display:inline-block;${cicleProperties}:${
 };
 ```
 
+```javascript
+const RENDER = () => {
+  const player = (() => {
+    let htmlPlayer = GAME_DATA.userData.map(
+      ({ id, name, turnTool, score, color }, idx) => {
+        let deffrentColor = !idx ? color.abled : color.disabled;
+        return `
+          <h2>${name}</h2>
+          <strong>${score}</strong>
+          <div class="box" data-taget="box" style="border:4px solid ${
+            color.abled
+          }; color:${
+          id === 1 ? orange : green
+        }; font-size: 46px; font-weight: bold">${turnTool}</div>
+          <button type="button" id="${id}" class="btn-start" style="background-color:${deffrentColor}; border: 1px solid ${deffrentColor}" ${
+          id === 1 ? "" : "disabled"
+        }>start</button>
+        `;
+      }
+    );
+    const [my, computer] = htmlPlayer;
+    $AreaMy.innerHTML = my;
+    $AreaComputer.innerHTML = computer;
+  })();
+
+```
+
 ### 2. json data
 
 ```javascript
