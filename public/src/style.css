@@ -29,6 +29,9 @@ button:disabled {
   min-width: 900px;
   padding: 60px;
 }
+h1 {
+  margin-bottom: 50px;
+}
 .content {
   display: flex;
   max-width: 90%;
@@ -46,8 +49,18 @@ button:disabled {
   padding-top: 60px;
 }
 .tab {
+  position: relative;
   display: flex;
   justify-content: center;
+}
+.tab::after {
+  position: absolute;
+  top: -34px;
+  left: -20px;
+  color: red;
+  font-weight: bold;
+  font-size: 1.25rem;
+  content: "tab 클릭!!!!";
 }
 .tab li {
   position: relative;
@@ -83,6 +96,7 @@ button:disabled {
   font-size: 25px;
   font-weight: bold;
 }
+
 .malpan li {
   position: relative;
   float: left;
